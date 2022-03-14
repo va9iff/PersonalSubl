@@ -4,9 +4,9 @@
 	"overlay_scroll_bars": "enabled",
 	"font_size": 8,
 
-	"ignored_packages":
+	"ignored_packages": 
 	[
-		"Vintage",
+		"Vintage"
 	],
 
 	"auto_complete_delay": 0,
@@ -15,7 +15,6 @@
 	"shift_tab_unindent": true,
 	"hot_exit": "only_on_quit",
 
-
 	// visual
 	"font_face": "cascadia code",
 	"highlight_modified_tabs": true,
@@ -23,13 +22,13 @@
 	"file_tab_style": "rounded",
 	"hide_tab_scrolling_buttons": true,
 
-	"hardware_acceleration": "opengl",
+	// "hardware_acceleration": "opengl",
 
 	/*when typing..*/
 	// "auto_hide_menu": true,
 	// "auto_hide_tabs": true,
 	// "auto_hide_status_bar": true,
 
+	"hardware_acceleration": "opengl",
+	// imported from Personal via Zetup : Personal command
 }
-
-// imported from Personal via Zetup : Personal command
