@@ -1,0 +1,10 @@
+// serves the directory of the file you build.
+
+// needs node and live-server installed
+
+// it doesn't stop the server. you should Cancel the build.
+// when you make new build, serving will stop.
+
+{
+	"shell_cmd": "live-server \"${folder}\""
+}

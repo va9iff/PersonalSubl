@@ -1,0 +1,41 @@
+{
+	"extends": "V-Hip Simple.sublime-theme",
+	"rules": [
+		{
+			"class": "tree_row",
+			"attributes": ["selectable", "hover", "!selected"],
+			"layer0.tint": "color(var(--accent) s(45%) l(50%))",
+			"layer0.opacity": 0.20,
+		},
+		{
+			"class": "tree_row",
+			"attributes": ["selected"],
+			"layer0.tint": "var(--background)",// selected row
+		},
+		{
+			"class": "puck_control",
+			"layer0.tint": "color(var(hipBlue) s(100%) l(70%))",//scroll bar
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [{"class": "tree_row","attributes": ["selected"]}],
+			"color":"var(--foreground)",//selected tree row color
+		},
+		{
+			"class": "sidebar_heading",
+			"fg":  "color(var(--background) s(100%) l(40%))",//sidebar heading
+			// "font.size": 19,//sidebar heading font size
+			// "font.bold": false,
+		},
+		{
+			"class": "sidebar_label",
+			"fg": "#555",
+			// "font.size": 13
+		},
+		{
+			"class": "disclosure_button_control",
+			"layer0.opacity": 0.3//side bar closed folders opacity
+		},
+
+	]
+}

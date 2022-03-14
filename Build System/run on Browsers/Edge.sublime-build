@@ -1,0 +1,5 @@
+// opens the file in Microsoft's Edge browser
+
+{
+ "cmd": ["C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe","$file"]
+}

@@ -1,0 +1,5 @@
+// open the file with Google Chrome browser
+
+{
+ "cmd": ["C:\\Users\\Vagif\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe","$file"]
+}

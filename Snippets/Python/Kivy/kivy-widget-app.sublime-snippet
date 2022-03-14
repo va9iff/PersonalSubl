@@ -1,0 +1,29 @@
+<!-- a basic setup -->
+
+<snippet>
+	<content><![CDATA[import kivy
+from kivy.app import App
+from kivy.uix.widget import Widget
+$1
+
+root=Widget()
+
+
+$0
+
+
+
+
+
+class MyApp(App):
+    def build(self):
+        return root
+
+if __name__ == '__main__':
+    MyApp().run()
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>!kivy</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.python</scope>
+</snippet>

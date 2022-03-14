@@ -1,0 +1,5 @@
+// opens a command propt in the file's directory
+
+{
+	"shell_cmd": "start  \"${file}\""
+}

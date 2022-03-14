@@ -1,0 +1,10 @@
+{
+	"extends": "V-Hip nicer.sublime-theme",
+	"rules": [
+		{
+			"class": "tab_control",
+			"attributes": ["modified"],
+			"layer2.tint": "hsl(340°, 100%, 50%)"
+		}
+	]
+}

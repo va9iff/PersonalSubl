@@ -1,0 +1,9 @@
+// serves the directory of the file you build.
+
+// needs node and live-server installed
+
+// it runs on cmd window. you can ctrl + c twice or close the window.
+
+{
+	"shell_cmd": "start cmd /k live-server \"${folder}\""
+}

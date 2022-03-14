@@ -1,0 +1,46 @@
+[
+	{
+		"caption": "fff smiko",
+		"command": "smiko",
+		"args": {
+			//
+		}
+	},
+	{
+		"caption": "CMD - File Folder",
+		"command": "open_cmd_file"
+	},
+	{
+		"caption": "CMD - Top Folder",
+		"command": "open_cmd_top_folder"
+	},
+	{
+		"caption": "Live-Server",
+		"command": "live_server_on_its_top_folder"
+	},
+	{
+		"caption": "Open Folder - Containing",
+		"command": "personal_open_folder"
+	},
+	{
+		"caption": "Open Folder - Top",
+		"command": "personal_open_top_folder"
+	},
+	{
+		"caption": "Prettify",
+		"command": "build_prettier_hide_output"
+	},
+	// {
+		// "caption": "Prettify - Don't save",
+		// "command": "prettier_dont_save"
+	// },
+
+	{
+		"caption": "Zetup : Personal Preferences",
+		"command": "zetup_personal_preferences"
+	},
+	{
+		"caption": "Zetup : Personal Keybinding",
+		"command": "zetup_personal_keybinding"
+	},
+]

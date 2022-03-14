@@ -1,0 +1,29 @@
+// this uses dart (windows) SASS
+
+// takes file and builds it as .css in the same dir
+{
+	"shell_cmd": "sass $file_name $file_name.css",
+	"file_patterns": ["*.scss", "*.sass"],
+	"variants": [
+		// compiles the sass directory to css directory.
+		// (children of the top opened folder)
+		// uses dart (windows) SASS in path
+		{
+			"name": "from sass folder to css folder",
+			"shell_cmd": "sass $folder/sass:$folder/css"
+		},
+		// whatch changes to compile
+		// this uses dart (windows) SASS
+		{
+			"name": "whatch",
+			"shell_cmd": "start cmd /k sass -w ."
+		},
+		// whatches to complete the sass directory to css directory.
+		// (children of the top opened folder)
+		// uses dart (windows) SASS in path
+		{
+			"name": "whatch sass folder to css folder",
+			"shell_cmd": "start cmd /k sass $folder/sass:$folder/css -w"
+		},
+	]
+}

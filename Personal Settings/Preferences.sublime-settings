@@ -1,0 +1,35 @@
+{
+	"theme": "Adaptive Fine Theme.sublime-theme",
+	"color_scheme": "gruvbox (Dark) (Hard) NDC.sublime-color-scheme",
+	"overlay_scroll_bars": "enabled",
+	"font_size": 8,
+
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+
+	"auto_complete_delay": 0,
+	"auto_complete_cycle": true,
+	"auto_complete_trailing_symbols": true,
+	"shift_tab_unindent": true,
+	"hot_exit": "only_on_quit",
+
+
+	// visual
+	"font_face": "cascadia code",
+	"highlight_modified_tabs": true,
+	"highlight_line": true,
+	"file_tab_style": "rounded",
+	"hide_tab_scrolling_buttons": true,
+
+	"hardware_acceleration": "opengl",
+
+	/*when typing..*/
+	// "auto_hide_menu": true,
+	// "auto_hide_tabs": true,
+	// "auto_hide_status_bar": true,
+
+}
+
+// imported from Personal via Zetup : Personal command

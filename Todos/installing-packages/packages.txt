@@ -1,0 +1,13 @@
+Package Control
+Terminus
+FileIcons
+Emmet
+PackageDev
+
+~~~
+
+Disableables:
+
+Guna
+SideBarEnhancements
+Buildview

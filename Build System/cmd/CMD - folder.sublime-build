@@ -1,0 +1,5 @@
+// opens a command propt in the top folder at the sidebar.
+
+{
+	"shell_cmd": "cd \"${folder}\" & start cmd .",
+}

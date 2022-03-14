@@ -1,0 +1,8 @@
+// "name": "Python via shell",
+{
+
+	"cmd": ["start", "cmd", "/k", "python.exe", "$file"],
+	"selector": "source.python",
+	"shell": true,
+	"working_dir": "$file_dir"
+}

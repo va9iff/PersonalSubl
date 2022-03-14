@@ -1,0 +1,3 @@
+After downloaded FileIcons package, we should include this (FileIcons) folder in our packages folder.
+Unlike AFileIcon, it claims that it has no runtime and doesn't requires restart.
+To add its icons to a theme, simply copy theme file to FileIcons/theme folder.

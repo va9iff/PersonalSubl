@@ -1,0 +1,64 @@
+{
+    "extends": "Adaptive.sublime-theme",
+    "variables": {
+        // "fg": "black",
+        // "bg": "white",
+    },
+    "rules": [
+		{
+			"class": "puck_control",
+			// "content_margin": [1.5, 1.5],//`puck or scrollbar size
+		},
+
+		{
+			"class": "sidebar_heading",
+			// "font.size": 19,
+			"font.size": 17,
+			"font.bold": false,
+		},
+		{
+			"class": "sidebar_label",
+			"font.size": 13
+		},
+		{
+			"class": "sidebar_tree",
+			// "row_padding": [16, 3, 4, 3],
+			"indent": 15,
+		},
+
+		{
+			"class": "sidebar_heading",
+			"fg":  "color(var(--background) s(100%) l(60%))",//sidebar heading
+			// "font.size": 19,//sidebar heading font size
+			// "font.bold": false,
+		},
+		{
+			"class": "tree_row",
+			"attributes": ["selectable", "hover", "!selected"],
+			"layer0.tint": "color(var(--accent) s(25%) l(50%))",
+			"layer0.opacity": 0.20,
+		},
+		{
+			"class": "tree_row",
+			"attributes": ["selected"],
+			"layer0.tint": "var(--background)",// selected row
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [{"class": "tree_row","attributes": ["selected"]}],
+			"color":"var(--foreground)",//selected tree row text color
+		},
+		{
+			"class": "puck_control",
+			"layer0.tint": "color(var(--accent) s(100%) l(70%))",//scroll bar
+		},
+		{
+			"class": "puck_control",
+			"attributes": ["hover"],
+			"layer0.opacity": 1, 
+		},
+
+
+
+    ]
+}

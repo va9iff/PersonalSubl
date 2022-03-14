@@ -1,0 +1,32 @@
+{
+	"extends": "Default.sublime-theme",
+	"variables": {
+		"hipRed": "hsl(6°, 80%, 62%)",
+		"hipBlue": "hsl(168°, 76%, 42%)",
+		"creamWhite": "hsl(0°, 0%, 93%)",
+		"highLight": "hsl(105%, 100%, 65%)",
+		"titleBar": "hsl(195°, 32%, 50%)"
+	},
+	"rules": [
+		{
+			"class": "tabset_control",
+			"layer0.tint":"var(hipBlue)",//back of the tabs
+		},
+		{
+			"class": "tab_control", 
+			"layer0.tint": "var(hipBlue)", // idle
+			"layer3.tint": "var(--background)", // separator lines
+		},
+		{
+			"class": "sidebar_container",
+			"layer0.tint": "var(creamWhite)", // sidebar background
+		},
+		{
+			"class": "title_bar",
+			"settings": ["themed_title_bar"],
+			"style": "dark",
+			"fg": "#fff",//ST4 title bar title text color
+			"bg":"var(titleBar)"//ST4 title bar background
+		},
+	]
+}
