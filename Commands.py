@@ -34,21 +34,13 @@ class SmikoCommand(sublime_plugin.WindowCommand):
 class OpenCmdFileCommand(sublime_plugin.WindowCommand): # V
     def run(self):
         print('start cmd at', self.window.active_view().file_name())
-        os.system('start cmd /K cd '+os.path.dirname(self.window.active_view().file_name()))
+        os.popen('start cmd /K cd '+os.path.dirname(self.window.active_view().file_name()))
 
 
 class OpenCmdTopFolderCommand(sublime_plugin.WindowCommand):
     def run(self):
         print('start cmd at', top_active_folder(self))
-        print("ll",top_active_folder(self))
-        os.system('start cmd /K cd '+top_active_folder(self))
-
-# text command version
-# class OpenCmdFileCommand(sublime_plugin.TextCommand):
-    # def run(self, edit):
-        # print('start cmd at', self.view.file_name())
-        # os.system('start cmd /K cd '+os.path.dirname(self.view))
-
+        os.popen('start cmd /K cd '+top_active_folder(self))
 
 
 # requires node and live-server installed I think
@@ -59,16 +51,14 @@ class LiveServerOnItsTopFolderCommand(sublime_plugin.WindowCommand):
 
 
 
-class PersonalOpenTopFolderCommand(sublime_plugin.WindowCommand):
-    def run(self):
-        os.system('explorer '+top_active_folder(self))
+# a cute example
+# class PersonalOpenTopFolderCommand(sublime_plugin.WindowCommand):
+    # def run(self):
+        # os.system('explorer '+top_active_folder(self))
 
-class PersonalOpenFolderCommand(sublime_plugin.WindowCommand):
-    def run(self):
-        os.system('explorer '+os.path.dirname(self.window.active_view().file_name()))
-
-# requres node and prettier installed
+# reqs: node and prettier installed
 # Build doesn't block the app, so I'll use prettier with build
+# but issue: building changes the last build (the one that's on ctrl b)
 class PrettierDontSaveCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         cmd_command = "prettier --use-tabs --arrow-parens \"avoid\" --no-semi"
@@ -128,6 +118,32 @@ class ZetupPersonalKeybindingCommand(sublime_plugin.ApplicationCommand):
         prefs           = open(prefs_path,'w')
         personal_prefs  = open(personal_prefs_path)
         prefs.write(personal_prefs.read())
+
+        prefs.close()
+        personal_prefs.close()
+
+
+
+class updatePersonalPreferencesCommand(sublime_plugin.ApplicationCommand):
+    def run(self):
+        script_dir = os.path.dirname(__file__) #<-- absolute dir the script is in
+        prefs_path = os.path.join(sublime.packages_path(), 'User', 'Preferences.sublime-settings')
+        personal_prefs_path = os.path.join(sublime.packages_path(), 'Personal', 'Personal Settings', 'Preferences.sublime-settings')
+        prefs           = open(prefs_path)
+        personal_prefs  = open(personal_prefs_path, 'w')
+        personal_prefs.write(prefs.read())
+
+        prefs.close()
+        personal_prefs.close()
+
+class updatePersonalKeybindingCommand(sublime_plugin.ApplicationCommand):
+    def run(self):
+        script_dir = os.path.dirname(__file__) #<-- absolute dir the script is in
+        prefs_path = os.path.join(sublime.packages_path(), 'User', 'Default (Windows).sublime-keymap')
+        personal_prefs_path = os.path.join(sublime.packages_path(), 'Personal', 'Personal Settings', 'Default (Windows).sublime-keymap')
+        prefs           = open(prefs_path)
+        personal_prefs  = open(personal_prefs_path, 'w')
+        personal_prefs.write(prefs.read())
 
         prefs.close()
         personal_prefs.close()

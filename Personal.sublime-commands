@@ -43,4 +43,14 @@
 		"caption": "Zetup : Personal Keybinding",
 		"command": "zetup_personal_keybinding"
 	},
+	{
+		"caption" : "update Personal Preferences",
+		"command" : "update_personal_preferences"
+
+	},
+	{
+		"caption" : "update Personal Keybinding",
+		"command" : "update_personal_keybinding"
+
+	}
 ]
