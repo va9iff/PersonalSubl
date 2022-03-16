@@ -1,10 +1,18 @@
 [
 	{
 		"caption": "fff smiko",
-		"command": "smiko",
+		"command": "zetup",
 		"args": {
 			//
 		}
+	},
+	{
+		"caption": "Zetup Personal",
+		"command": "zetup_personal",
+	},
+	{
+		"caption": "Update Personal",
+		"command": "update_personal",
 	},
 	{
 		"caption": "CMD - File Folder",
@@ -35,22 +43,28 @@
 		// "command": "prettier_dont_save"
 	// },
 
-	{
-		"caption": "Zetup : Personal Preferences",
-		"command": "zetup_personal_preferences"
-	},
-	{
-		"caption": "Zetup : Personal Keybinding",
-		"command": "zetup_personal_keybinding"
-	},
-	{
-		"caption" : "update Personal Preferences",
-		"command" : "update_personal_preferences"
 
-	},
-	{
-		"caption" : "update Personal Keybinding",
-		"command" : "update_personal_keybinding"
+	// we chose it in setup's list input
+	// {
+		// "caption": "Zetup : Personal Preferences",
+		// "command": "zetup_personal_preferences"
+	// },
+	// {
+		// "caption": "Zetup : Personal Keybinding",
+		// "command": "zetup_personal_keybinding"
+	// },
+	///////
 
-	}
+	// we chose it in setup's list input
+	// {
+		// "caption" : "update Personal Preferences",
+		// "command" : "update_personal_preferences"
+// 
+	// },
+	// {
+		// "caption" : "update Personal Keybinding",
+		// "command" : "update_personal_keybinding"
+// 
+	// }
+	///////
 ]
