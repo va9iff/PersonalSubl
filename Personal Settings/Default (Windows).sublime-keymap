@@ -14,15 +14,6 @@
 	// Plugin specific =======================================================
 	// =======================================================================
 
-	// JsPrettier ============================================================
-	// =======================================================================
-
-	// format the code
-	// {
-	// 	"keys": ["ctrl+alt+s"],
-	// 	"command": "js_prettier"
-	// },
-
 	// Terminus ==============================================================
 	// =======================================================================
 
@@ -31,7 +22,7 @@
 		"keys": ["alt+`"],
 		"command": "toggle_terminus_panel",
 		"args": {
-			"cwd": "${file_path:${folder}}",
+			"cwd": "${folder}",
 			"panel_name": "Terminus",
 		}
 	},
@@ -63,21 +54,18 @@
 			}
 		]
 	},
+	// =======================================================================
 
-	// my node prettify calling command
+	// Prettify with build command
 	{
 		"keys": ["alt+shift+f"],
 		"command": "prettify",
 	},
 
-	// // [start (powershell) terminus panel | hide | open the running panel]
-	// {
-	// 	"keys": ["alt+shift+`"],
-	// 	"command": "toggle_terminus_panel",
-	// 	"args": {
-	// 		"cmd":"powershell",
-	// 		"cwd": "${file_path:${folder}}",
-	// 		"panel_name": "Terminus"
-	// 	}
-	// },
+	// open Live-server with minimized cmd window
+	{
+		"keys": ["alt+l","alt+o"],
+		"command": "live_server_on_its_top_folder",
+	}
+
 ]
