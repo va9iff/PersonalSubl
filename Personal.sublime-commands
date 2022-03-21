@@ -36,7 +36,7 @@
 	},
 	{
 		"caption": "Prettify",
-		"command": "build_prettier_hide_output"
+		"command": "prettier_async"
 	},
 	// {
 		// "caption": "Prettify - Don't save",

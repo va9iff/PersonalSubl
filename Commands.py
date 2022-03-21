@@ -75,11 +75,20 @@ class PrettierDontSaveCommand(sublime_plugin.TextCommand):
 
 
 # requres node and prettier installed
-class BuildPrettierHideOutputCommand(sublime_plugin.WindowCommand):
+# class BuildPrettierHideOutputCommand(sublime_plugin.WindowCommand):
+# 	def run(self):
+# 		self.window.run_command("save", {"async": False})
+# 		self.window.run_command("build", {"build_system": "Packages/Personal/External Tools/Node Tools/Prettier/Prettier - code format.sublime-build", "choice_build_system": True, "choice_variant": True, "variant": ""})
+# 		self.window.run_command("hide_panel", {"panel": "output.exec"})
+
+
+# requres node and prettier installed
+# building changes current selected build. so we just use async os command
+class PrettierAsyncCommand(sublime_plugin.WindowCommand):
 	def run(self):
-		self.window.run_command("save", {"async": False})
-		self.window.run_command("build", {"build_system": "Packages/Personal/External Tools/Node Tools/Prettier/Prettier - code format.sublime-build", "choice_build_system": True, "choice_variant": True, "variant": ""})
-		self.window.run_command("hide_panel", {"panel": "output.exec"})
+		cmd_command = 'prettier --write --use-tabs  --arrow-parens "avoid" --no-semi "'+self.window.active_view().file_name()+'"'
+		os.popen(cmd_command)
+
 
 # requres node and prettier installed
 # Build doesn't block the app, so I'll use prettier with build
@@ -100,8 +109,6 @@ class BuildPrettierHideOutputCommand(sublime_plugin.WindowCommand):
 #         self.view.insert(edit, 0, output_string)
 
 
-
-# C:\Users\Vagif\AppData\Roaming\Sublime Text\Packages\Personal\Todos\setting-and-keybindings\preferences-settings.sublime-settings
 
 class ZetupPersonalPreferencesCommand(sublime_plugin.ApplicationCommand):
 	def run(self):
