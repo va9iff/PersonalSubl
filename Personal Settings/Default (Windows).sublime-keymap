@@ -23,7 +23,7 @@
 		"command": "toggle_terminus_panel",
 		"args": {
 			"cwd": "${folder}",
-			"panel_name": "Terminus",
+			"panel_name": "Terminus"
 		}
 	},
 
@@ -59,13 +59,12 @@
 	// Prettify with build command
 	{
 		"keys": ["alt+shift+f"],
-		"command": "prettify",
+		"command": "prettier_async"
 	},
 
 	// open Live-server with minimized cmd window
 	{
-		"keys": ["alt+l","alt+o"],
-		"command": "live_server_on_its_top_folder",
+		"keys": ["alt+l", "alt+o"],
+		"command": "live_server_on_its_top_folder"
 	}
-
 ]
