@@ -66,5 +66,9 @@
 	{
 		"keys": ["alt+l", "alt+o"],
 		"command": "live_server_on_its_top_folder"
+	},
+	{
+		"keys": ["alt+d"],
+		"command": "open_cmd_top_folder",
 	}
 ]
