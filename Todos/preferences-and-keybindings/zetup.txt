@@ -1,0 +1,2 @@
+Zetup is a command of Personal to override user preferences and bindings with our Personal one.
+When called, will ask you preferences or key bindings to override/setup (Zetup).
