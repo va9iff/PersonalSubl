@@ -4,7 +4,20 @@
 // node and prettier should be installed
 
 {
-	"shell_cmd": "prettier --write --use-tabs  --arrow-parens \"avoid\" --no-semi \"${file}\""
+	"shell_cmd": "prettier --write --use-tabs  --arrow-parens \"avoid\" --no-semi \"${file}\"",
+	"selector": "source.python",
+	"file_patterns": [
+		"*.html",
+		"*.css",
+		"*.js",
+		"*.scss",
+		"*.sass",
+		"*.less",
+		"*.md",
+		"*.yaml",
+		"*.json"
+	]
+
 	// "quiet": true
 	// "panel": false
 }
