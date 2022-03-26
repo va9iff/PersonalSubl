@@ -1,7 +1,7 @@
 [
 	{
-		"caption": "fff smiko",
-		// "command": "zetup",
+		"caption": "Testing Command",
+		"command": "test",
 		// "args": {
 			//
 		// }

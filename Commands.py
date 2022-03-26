@@ -3,6 +3,7 @@ import sublime_plugin
 import os
 import subprocess
 import json
+import threading
 
 
 def top_active_folder(window_command):
@@ -29,10 +30,11 @@ def top_active_folder(window_command):
 
 
 
-class SmikoCommand(sublime_plugin.WindowCommand):
+class TestCommand(sublime_plugin.WindowCommand):
 	def run(self):
-		print('SMIKKKO')
-		print(os.path.dirname(self.window.active_view().file_name()))
+		print('< TEST')
+		# print(os.path.dirname(self.window.active_view().file_name()))
+		print('TEST >')
 
 
 
@@ -82,31 +84,40 @@ class PrettierDontSaveCommand(sublime_plugin.TextCommand):
 # 		self.window.run_command("hide_panel", {"panel": "output.exec"})
 
 
-# requres node and prettier installed
-# building changes current selected build. so we just use async os command
+
 class PrettierAsyncCommand(sublime_plugin.WindowCommand):
+	def prettifyWithStatusMsg(self, win):
+		cmd = 'prettier --write --use-tabs  --arrow-parens "avoid" --no-semi "'+win.active_view().file_name()+'"'
+
+		sb = subprocess.Popen(cmd, shell=True, 
+							stdout=subprocess.PIPE,
+							stderr = subprocess.PIPE,
+							# stdin = subprocess.PIPE
+							)
+		subprocess_return = sb.stdout.read() + sb.stderr.read() 
+		output = subprocess_return.decode("utf-8") 
+		output = output.replace("\\n","\n")
+
+		panel = win.create_output_panel("Prettier")
+		panel.settings().set("gutter", False)
+
+		panel.set_read_only(False)
+		panel.run_command("append", {"characters":output})
+		panel.set_read_only(True)
+
+		win.run_command('revert')
+
+		if len(str(output).split("\n")) == 2:
+			win.status_message(output)
+			# win.run_command('hide_panel', {"panel":"output.Prettier"})
+		else:
+			win.run_command('show_panel', {"panel":"output.Prettier"})
+
+
 	def run(self):
-		cmd_command = 'prettier --write --use-tabs  --arrow-parens "avoid" --no-semi "'+self.window.active_view().file_name()+'"'
-		os.popen(cmd_command)
+		thr = threading.Thread(target=self.prettifyWithStatusMsg, args=(self.window,), kwargs={})
+		thr.start()
 
-
-# requres node and prettier installed
-# Build doesn't block the app, so I'll use prettier with build
-# class PrettierFormatCommand(sublime_plugin.WindowCommand):
-	# def run(self):
-		# view = self.window.active_view()
-		# view.run_command('prettier_dont_save')
-		# view.run_command('save')
-
-
-# different way
-# class PrettierDontSaveCommand(sublime_plugin.TextCommand):
-#     def run(self, edit):
-#         output = subprocess.check_output(['prettier',self.view.file_name()], shell=True)
-#         output_string = str(output).replace('\\n','\n')[2:-1]
-
-#         self.view.erase(edit, sublime.Region(0, self.view.size()))
-#         self.view.insert(edit, 0, output_string)
 
 
 
