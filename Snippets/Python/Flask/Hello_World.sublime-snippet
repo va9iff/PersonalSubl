@@ -1,0 +1,18 @@
+<!-- a basic setup -->
+
+<snippet>
+    <content><![CDATA[from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return ${0:"<p>Hello, World!</p>"}
+
+]]></content>
+
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>!flask</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.python</scope>
+</snippet>
