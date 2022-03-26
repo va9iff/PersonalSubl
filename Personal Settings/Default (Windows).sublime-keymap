@@ -69,7 +69,12 @@
 		"command": "live_server_on_its_top_folder"
 	},
 	{
-		"keys": ["alt+d","alt+d"],
+		"keys": ["alt+k"],
 		"command": "open_cmd_top_folder",
-	}
+	},
+	// Todo maybe
+	// {
+		// "keys": ["alt+j"],
+		// "command": "open_windows_terminal_top_folder",
+	// }
 ]

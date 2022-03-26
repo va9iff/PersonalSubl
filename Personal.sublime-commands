@@ -15,7 +15,7 @@
 		"command": "update_personal",
 	},
 	{
-		"caption": "CMD - File Folder",
+		"caption": "CMD - File's Folder",
 		"command": "open_cmd_file"
 	},
 	{
