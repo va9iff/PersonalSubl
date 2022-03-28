@@ -1,0 +1,23 @@
+%YAML 1.2
+---
+name: ES6 Templates
+file_extensions:
+  - js
+  - component.js
+  - page.js
+scope: source.js.parasails
+contexts:
+  main:
+    - match: ""
+      push: scope:source.js
+      with_prototype:
+      - match: '`'
+        push:
+          - meta_content_scope: text.html.basic.embedded.js
+          - include: 'scope:text.html.basic'
+          - match: '`'
+            pop: true
+          - match: (\$\{)
+            embed: scope:source.js
+            escape: (\})
+
