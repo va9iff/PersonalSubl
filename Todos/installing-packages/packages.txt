@@ -3,7 +3,7 @@ Terminus
 FileIcons
 Emmet
 PackageDev
-
+Resolve-Javascript-Modules
 ~~~
 
 Disableables:
