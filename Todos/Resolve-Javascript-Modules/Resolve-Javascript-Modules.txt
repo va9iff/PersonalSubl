@@ -1,0 +1,5 @@
+This package has some steps (optional) to update its api. Plus it doens't show up in the packages folder. The best way is probably to git clone to packages and do the things (they are in the readme)
+Overall Looks like a super package, haven't used alot yet.
+
+
+It does works without these steps.
