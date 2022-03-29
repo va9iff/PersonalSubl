@@ -10,6 +10,7 @@
 	{ "keys": ["alt+shift+s"], "command": "toggle_status_bar" },
 	{ "keys": ["alt+shift+m"], "command": "toggle_minimap" },
 	{ "keys": ["ctrl+shift+'"], "command": "toggle_tabs" },
+	{ "keys": ["alt+shift+g"], "command": "toggle_setting", "args": {"setting": "gutter"}},
 
 	// =======================================================================
 	// Plugin specific =======================================================
@@ -28,10 +29,17 @@
 		}
 	},
 
-	// close all terminus shells. (T)erminate
 	{
-		"keys": ["ctrl+alt+shift+t"],
-		"command": "terminus_close_all"
+		"keys": ["alt+c"],
+		"command": "terminus_close_all",
+		// adds kinda -- if (terminus_viwe)
+        "context": [
+            { "key": "terminus_view" },
+            { "key": "terminus_view.closed", "operator": "not_equal", "operand": true },
+            { "key": "overlay_visible", "operator": "equal", "operand": false },
+            { "key": "popup_visible", "operator": "equal", "operand": false }
+        ]
+
 	},
 
 	// close view with close file key binding
