@@ -25,14 +25,14 @@ class OpenCmdFileCommand(sublime_plugin.WindowCommand): # V
 
 class OpenCmdTopFolderCommand(sublime_plugin.WindowCommand):
 	def run(self):
-		print('start cmd at', top_active_folder(self))
+		self.window.status_message('CMD at >> '+top_active_folder(self))
 		os.popen('start cmd /K cd '+top_active_folder(self))
 
 
 # requires node and live-server installed I think
 class LiveServerOnItsTopFolderCommand(sublime_plugin.WindowCommand):
 	def run(self):
-		print('Live Server at',top_active_folder(self))
+		self.window.status_message('Live Server at >> '+top_active_folder(self))
 		os.system('start /min cmd /K live-server '+top_active_folder(self))
 
 
@@ -77,3 +77,7 @@ class PrettierAsyncCommand(sublime_plugin.WindowCommand):
 		thr.start()
 
 
+class MyTerminusCloseAll(sublime_plugin.WindowCommand):
+	def run(self):
+		self.window.run_command("terminus_close_all")
+		self.window.status_message("Closed all Terminus instances on this window")
