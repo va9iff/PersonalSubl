@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+const elem = s => {
+	s = s.split(".")
+	let el = document.createElement(s.shift())
+	for (let c of s) el.classList.add(c)
+	return el
+}
+!!define.${0}
+
+]]></content>
+	<tabTrigger>!!define.elem</tabTrigger>
+	<scope>source.js</scope>
+</snippet>

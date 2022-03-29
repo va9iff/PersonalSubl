@@ -1,12 +1,9 @@
-<!-- a basic setup -->
-
 <snippet>
-	<content><![CDATA[const grab = (domSelector)=>document.querySelector(domSelector)
-${0:!!define.${1}}
+	<content><![CDATA[
+const grab = s => document.querySelector(s)
+!!define.${0}
 
 ]]></content>
-	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>!!define.grab</tabTrigger>
-	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.js</scope>
 </snippet>
