@@ -1,9 +1,9 @@
 <snippet>
 	<content><![CDATA[
 const grab = s => document.querySelector(s)
-!!define.${0}
+!!def.${0}
 
 ]]></content>
-	<tabTrigger>!!define.grab</tabTrigger>
+	<tabTrigger>!!def.grab</tabTrigger>
 	<scope>source.js</scope>
 </snippet>
