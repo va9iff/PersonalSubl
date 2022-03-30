@@ -2,7 +2,7 @@
 	"theme": "Adaptive Fine Theme.sublime-theme",
 	"color_scheme": "gruvbox (Dark) (Hard) NDC.sublime-color-scheme",
 	"overlay_scroll_bars": "enabled",
-	"font_size": 9,
+	"font_size": 11,
 
 	"ignored_packages": 
 	[
@@ -21,6 +21,10 @@
 	"highlight_line": true,
 	"file_tab_style": "square",
 	"hide_tab_scrolling_buttons": true,
+	"rulers":
+	[
+		80
+	],
 
 	// "hardware_acceleration": "opengl",
 
