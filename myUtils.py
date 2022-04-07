@@ -3,8 +3,8 @@ def top_active_folder(window_command):
 	folders = window_command.window.folders()
 	active_file = window_command.window.active_view().file_name()
 
-	print(folders)
-	print(active_file)
+	# print(folders)
+	# print(active_file)
 
 	if active_file and folders:
 		for folder in folders:
