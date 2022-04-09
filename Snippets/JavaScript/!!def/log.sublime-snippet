@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-const log = (...arg) => console.log(...s)
+const log = (...a) => console.log(...a)
 !!def.${0}
 
 ]]></content>
