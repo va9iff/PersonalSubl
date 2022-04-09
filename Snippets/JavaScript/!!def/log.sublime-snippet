@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-const log = (...s) => document.querySelector(...s)
+const log = (...arg) => console.log(...s)
 !!def.${0}
 
 ]]></content>
