@@ -18,7 +18,9 @@ export class ${1:MyComponent} extends LitElement {
   }
 
   render() {
-    return html`${3:<p>Hello, ${this.name}!</p>}`;
+    return html`
+    ${3:<p>Hello, ${this.name}!</p>}
+    `;
   }
   $0
 }
