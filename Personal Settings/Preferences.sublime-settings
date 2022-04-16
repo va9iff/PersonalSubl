@@ -2,10 +2,11 @@
 	"theme": "Adaptive Fine Theme.sublime-theme",
 	"color_scheme": "gruvbox (Dark) (Hard) NDC.sublime-color-scheme",
 	"overlay_scroll_bars": "enabled",
-	"font_size": 11,
+	"font_size": 8,
 
 	"ignored_packages": 
 	[
+		"Resolve Javascript Modules",
 		"Vintage",
 	],
 
