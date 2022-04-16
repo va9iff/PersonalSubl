@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[
+import { LitElement, html, css } from 'https://cdn.jsdelivr.net/gh/lit/dist@2/all/lit-all.min.js'
+
+export class ${1:MyComponent} extends LitElement {
+  static properties = {
+    ${4:name}: {},
+  };
+  static styles = css`
+    :host {
+
+    }
+  `;
+
+  constructor() {
+    super();
+    this.${5:name} = ${6:'World'};
+  }
+
+  render() {
+    return html`${3:<p>Hello, ${this.name}!</p>}`;
+  }
+  $0
+}
+
+customElements.define('${2:my-component} ', ${1:MyComponent});
+]]></content>
+  <tabTrigger>lit</tabTrigger>
+  <scope>source.js</scope>
+</snippet>
