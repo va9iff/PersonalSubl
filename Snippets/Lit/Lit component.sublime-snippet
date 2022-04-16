@@ -14,7 +14,7 @@ export class ${1:MyComponent} extends LitElement {
 
   constructor() {
     super();
-    this.${5:name} = ${6:'World'};
+    this.${4:name} = ${5:'World'};
   }
 
   render() {
