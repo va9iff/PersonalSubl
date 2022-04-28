@@ -27,7 +27,6 @@ export class ${1:MyComponent} extends LitElement {
 
 customElements.define('${2:my-component} ', ${1:MyComponent});
 
-export { ${1:MyComponent} }
 ]]></content>
   <tabTrigger>lit</tabTrigger>
   <scope>source.js</scope>
